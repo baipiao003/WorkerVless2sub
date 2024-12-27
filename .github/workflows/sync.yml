@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day
+    - cron: "0 */3 * * *"  # 每天每3小时同步一次
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
         id: sync
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
-          upstream_sync_repo: cmliu/WorkerVless2sub
-          upstream_sync_branch: main
-          target_sync_branch: main
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }} # automatically generated, no need to set
+          upstream_sync_repo: cmliu/WorkerVless2sub   # 上游仓库的路径
+          upstream_sync_branch: main                  # 上游仓库要同步的分支
+          target_sync_branch: main                    # 当前仓库要同步的分支
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}  # automatically generated, no need to set
 
           # Set test_mode true to run tests instead of the true action!!
           test_mode: false
