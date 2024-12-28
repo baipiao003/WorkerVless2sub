@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 */3 * * *"  # 每天每3小时同步一次
+    - cron: "0 */6 * * *"  # 每天每3小时同步一次
   workflow_dispatch:
 
 jobs:
