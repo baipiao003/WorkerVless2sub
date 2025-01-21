@@ -1,7 +1,8 @@
 cloudflare.cfgo.cc:2053#官方优选
 skk.moe:443#官方优选
-icook.hk:8443#官方优选
-icook.tw:2096#官方优选
+icook.hk:8443#icook.hk优选
+icook.tw:443#icook.tw优选1
+icook.tw:2096#icook.tw优选2
 cf.090227.xy2:2087#官方优选
 cfip.xooooooo.tk:8443#官方优选
 wz.weishao2023.dk.eu.org
@@ -34,6 +35,7 @@ malaysia.com
 russia.com
 singapore.com#新加坡
 visa.cn
+www.visa.com
 www.visa.com.sg
 www.visa.com.hk
 www.visa.com.tw
@@ -63,7 +65,6 @@ gur.gov.ua
 www.ipchicken.com
 download.yunzhongzhuan.com
 www.csgo.com
-www.visa.com
 log.bpminecraft.com
 www.iakeys.com
 www.whatismyip.com
@@ -86,3 +87,5 @@ speed.marisalnc.com#ktff大佬提供维护
 cfip.xxxxxxxx.tk#OTC大佬提供维护
 bestcf.onecf.eu.org#Mingyu大佬提供维护
 cf.zhetengsha.eu.org#小一大佬提供维护
+aliyun.2096.us.kg:2096#天诚优选1
+aliyun.2096.us.kg#天诚优选
