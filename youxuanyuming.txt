@@ -88,4 +88,4 @@ cfip.xxxxxxxx.tk#OTC大佬提供维护
 bestcf.onecf.eu.org#Mingyu大佬提供维护
 cf.zhetengsha.eu.org#小一大佬提供维护
 aliyun.2096.us.kg:2096#天诚优选1
-aliyun.2096.us.kg#天诚优选
+aliyun.2096.us.kg:443#天诚优选2
