@@ -674,6 +674,14 @@ export default {
 			}
 		}
 
+		// 构建订阅响应头对象
+		const responseHeaders = {
+			"content-type": "text/plain; charset=utf-8",
+			"Profile-Update-Interval": `${SUBUpdateTime}`,
+			"Profile-web-page-url": url.origin,
+			//"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
+		};
+
 		if (host.toLowerCase().includes('notls') || host.toLowerCase().includes('worker') || host.toLowerCase().includes('trycloudflare')) noTLS = 'true';
 		noTLS = env.NOTLS || noTLS;
 		let subConverterUrl = generateFakeInfo(url.href, uuid, host);
@@ -939,14 +947,6 @@ export default {
 				combinedContent += '\n' + notlsresponseBody;
 				console.log("notlsresponseBody: " + notlsresponseBody);
 			}
-
-			// 构建响应头对象
-			const responseHeaders = {
-				"content-type": "text/plain; charset=utf-8",
-				"Profile-Update-Interval": `${SUBUpdateTime}`,
-				"Profile-web-page-url": url.origin,
-				//"Subscription-Userinfo": `upload=${UD}; download=${UD}; total=${total}; expire=${expire}`,
-			};
 
 			if (协议类型 == atob('VHJvamFu') && (userAgent.includes('surge') || (format === 'surge' && !userAgent.includes('subconverter'))) && !userAgent.includes('cf-workers-sub')) {
 				const 特洛伊Links = combinedContent.split('\n');
@@ -1348,8 +1348,8 @@ async function subHtml(request) {
 								<div class="info-tooltip" id="infoTooltip">
 									<strong>安全提示</strong>：使用优选订阅生成器时，需要您提交 <strong>节点配置信息</strong> 用于生成优选订阅链接。这意味着订阅器的维护者可能会获取到该节点信息。<strong>请自行斟酌使用风险。</strong><br>
 									<br>
-									订阅转换后端：<strong><a href='${subProtocol}://${subConverter}/version'>${subProtocol}://${subConverter}</a></strong><br>
-									订阅转换配置文件：<strong><a href='${subConfig}'>${subConfig}</a></strong>
+									订阅转换后端：<strong><a href='${subProtocol}://${subConverter}/version' target="_blank" rel="noopener noreferrer">${subProtocol}://${subConverter}</a></strong><br>
+									订阅转换配置文件：<strong><a href='${subConfig}' target="_blank" rel="noopener noreferrer">${subConfig}</a></strong>
 								</div>
 							</div>
 						</div>
